@@ -1,0 +1,261 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  <h2><a name="apiCitiesIdDelete"></a>apiCitiesIdDelete</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Cities/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>DELETE</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the city to delete</p>
+	  </li>
+  </ul>
+  <h2><a name="apiCitiesIdImagesPost"></a>apiCitiesIdImagesPost</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Cities/{id}/images</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the city to upload the image</p>
+	  </li>
+	  <li class="parameter">
+      <span class="param-in">Form: </span>
+      
+      
+      
+      
+      <span class="param-name">file</span>
+      <span class="param-type">byte[]</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">alternativeText</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Alternative text (Alt)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">thumbnail</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Indicates if the image should be used as thumbnail</p>
+	  </li>
+  </ul>
+  <h2><a name="apiCitiesIdPut"></a>apiCitiesIdPut</h2>
+  <hr>
+  <p></p>
+  <p>Sample request:                    PUT /cities/{cityId}      {         \&quot;name\&quot;: \&quot;Paris\&quot;,         \&quot;country\&quot;: \&quot;France\&quot;,         \&quot;postOffice\&quot;: \&quot;98745\&quot;      }</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Cities/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>PUT</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the city to update</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">UpdateCityDto(UpdateCityDto)</span>
+      
+      <p class="param-description">The data for the updated city</p>
+	  </li>
+  </ul>
+  <h2><a name="apiCitiesPost"></a>apiCitiesPost</h2>
+  <hr>
+  <p></p>
+  <p>Sample request:                    POST /cities      {         \&quot;name\&quot;: \&quot;Paris\&quot;,         \&quot;country\&quot;: \&quot;France\&quot;,         \&quot;postOffice\&quot;: \&quot;45651\&quot;      }</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Cities</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="CityOutputDto"><a href="">CityOutputDto</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">CreateCityDto(CreateCityDto)</span>
+      
+      <p class="param-description">The data for the new city</p>
+	  </li>
+  </ul>
+  <h2><a name="apiCitiesTrendingDestinationsGet"></a>apiCitiesTrendingDestinationsGet</h2>
+  <hr>
+  <p></p>
+  <p>This endpoint provides a list of the most visited cities, serving as a curated selection of trending travel destinations.  Each entry in the response includes key details such as:  - The city&#x27;s unique identifier.  - The city&#x27;s name.  - A visually appealing thumbnail image.    The number of destinations retrieved can be adjusted by specifying the count parameter.   If the parameter is omitted, the default value of 5 is used.</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Cities/trending-destinations</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="CityAsTrendingDestinationOutputDto"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">count</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The number of trending destinations to retrieve. Defaults to 5 if no value is provided.</p>
+	  </li>
+  </ul>
+  <h2><a name="getCities"></a>getCities</h2>
+  <hr>
+  <p></p>
+  <p>This endpoint allows clients to fetch cities with options for sorting, pagination, and filtering.  The available query parameters include:  - **SortOrder**: Specifies the sorting order (e.g., ascending or descending).  - **SortColumn**: Specifies the column to sort by (e.g., name, population).  - **PageNumber**: Specifies the page number for pagination.  - **PageSize**: Specifies the number of items per page.  - **SearchTerm**: Filters cities based on a search term that matches city names.                Example usage:        GET /cities?sortOrder&#x3D;asc&amp;sortColumn&#x3D;name&amp;pageNumber&#x3D;1&amp;pageSize&#x3D;10&amp;searchTerm&#x3D;paris    The response includes paginated metadata in the &#x60;X-Pagination&#x60; header and links to related pages (e.g., next, previous).</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Cities</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="CityOutputDto"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageNumber</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageSize</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SearchTerm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortColumn</span>
+      <span class="param-type">CitySortColumn</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortOrder</span>
+      <span class="param-type">SortOrder</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="getCity"></a>getCity</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Cities/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="CityOutputWithHotelsAndImagesDto"><a href="">CityOutputWithHotelsAndImagesDto</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the city</p>
+	  </li>
+  </ul>
+</div>

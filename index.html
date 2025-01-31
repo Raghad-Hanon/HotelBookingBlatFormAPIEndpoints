@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="assets/js/main.js" type="text/javascript"></script>
+
+  <title>REST API Resources</title>
+</head>
+<body>
+  <div class="header">
+    <div class="top-bar">
+      <h1 id="logo"><a class="logo" href="/"><span>Swagger</span><span class="light">API Docs</span></a></h1>
+    </div>
+  </div>
+  <div class="model-container"></div>
+  <div class="content">
+    <div class="box clearfix">
+      <div class="sidebar">
+        <div class="section-box">
+          <div class="section-header">
+            Overview
+          </div>
+          <ul>
+            <li>Getting Started</li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/AuthenticationApi">AuthenticationApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/AuthenticationApi#apiAuthenticationLoginPost">apiAuthenticationLoginPost</a></li>
+            <li><a href="#!/AuthenticationApi#apiAuthenticationRegisterAdminPost">apiAuthenticationRegisterAdminPost</a></li>
+            <li><a href="#!/AuthenticationApi#apiAuthenticationRegisterPost">apiAuthenticationRegisterPost</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/BookingsApi">BookingsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/BookingsApi#apiBookingsIdDelete">apiBookingsIdDelete</a></li>
+            <li><a href="#!/BookingsApi#apiBookingsIdInvoiceGet">apiBookingsIdInvoiceGet</a></li>
+            <li><a href="#!/BookingsApi#apiBookingsIdPdfGet">apiBookingsIdPdfGet</a></li>
+            <li><a href="#!/BookingsApi#apiBookingsPost">apiBookingsPost</a></li>
+            <li><a href="#!/BookingsApi#getBooking">getBooking</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/CitiesApi">CitiesApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/CitiesApi#apiCitiesIdDelete">apiCitiesIdDelete</a></li>
+            <li><a href="#!/CitiesApi#apiCitiesIdImagesPost">apiCitiesIdImagesPost</a></li>
+            <li><a href="#!/CitiesApi#apiCitiesIdPut">apiCitiesIdPut</a></li>
+            <li><a href="#!/CitiesApi#apiCitiesPost">apiCitiesPost</a></li>
+            <li><a href="#!/CitiesApi#apiCitiesTrendingDestinationsGet">apiCitiesTrendingDestinationsGet</a></li>
+            <li><a href="#!/CitiesApi#getCities">getCities</a></li>
+            <li><a href="#!/CitiesApi#getCity">getCity</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/DiscountsApi">DiscountsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/DiscountsApi#apiRoomsFeaturedDealsGet">apiRoomsFeaturedDealsGet</a></li>
+            <li><a href="#!/DiscountsApi#apiRoomsRoomIdDiscountsIdDelete">apiRoomsRoomIdDiscountsIdDelete</a></li>
+            <li><a href="#!/DiscountsApi#apiRoomsRoomIdDiscountsPost">apiRoomsRoomIdDiscountsPost</a></li>
+            <li><a href="#!/DiscountsApi#getDiscount">getDiscount</a></li>
+            <li><a href="#!/DiscountsApi#getDiscounts">getDiscounts</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/GuestsApi">GuestsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/GuestsApi#apiGuestsGuestIdBookingsGet">apiGuestsGuestIdBookingsGet</a></li>
+            <li><a href="#!/GuestsApi#apiGuestsGuestIdGet">apiGuestsGuestIdGet</a></li>
+            <li><a href="#!/GuestsApi#apiGuestsGuestIdRecentlyVisitedHotelsGet">apiGuestsGuestIdRecentlyVisitedHotelsGet</a></li>
+            <li><a href="#!/GuestsApi#apiGuestsRecentlyVisitedHotelsGet">apiGuestsRecentlyVisitedHotelsGet</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/HotelsApi">HotelsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/HotelsApi#apiHotelsIdDelete">apiHotelsIdDelete</a></li>
+            <li><a href="#!/HotelsApi#apiHotelsIdImagesPost">apiHotelsIdImagesPost</a></li>
+            <li><a href="#!/HotelsApi#apiHotelsIdPut">apiHotelsIdPut</a></li>
+            <li><a href="#!/HotelsApi#apiHotelsPost">apiHotelsPost</a></li>
+            <li><a href="#!/HotelsApi#getHotel">getHotel</a></li>
+            <li><a href="#!/HotelsApi#getHotels">getHotels</a></li>
+            <li><a href="#!/HotelsApi#searchAndFilterHotels">searchAndFilterHotels</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/ReviewsApi">ReviewsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/ReviewsApi#apiHotelsHotelIdReviewsAverageRatingGet">apiHotelsHotelIdReviewsAverageRatingGet</a></li>
+            <li><a href="#!/ReviewsApi#apiHotelsHotelIdReviewsPost">apiHotelsHotelIdReviewsPost</a></li>
+            <li><a href="#!/ReviewsApi#apiHotelsHotelIdReviewsReviewIdDelete">apiHotelsHotelIdReviewsReviewIdDelete</a></li>
+            <li><a href="#!/ReviewsApi#apiHotelsHotelIdReviewsReviewIdPut">apiHotelsHotelIdReviewsReviewIdPut</a></li>
+            <li><a href="#!/ReviewsApi#getHotelReviews">getHotelReviews</a></li>
+            <li><a href="#!/ReviewsApi#getReview">getReview</a></li>
+          </ul>
+        </div>
+        <div class="section-box">
+          <div class="section-header">
+            <a href="#!/RoomsApi">RoomsApi</a>
+          </div>
+          <ul>
+            <li><a href="#!/RoomsApi#apiRoomsIdDelete">apiRoomsIdDelete</a></li>
+            <li><a href="#!/RoomsApi#apiRoomsIdGet">apiRoomsIdGet</a></li>
+            <li><a href="#!/RoomsApi#apiRoomsIdImagesPost">apiRoomsIdImagesPost</a></li>
+            <li><a href="#!/RoomsApi#apiRoomsIdPut">apiRoomsIdPut</a></li>
+            <li><a href="#!/RoomsApi#apiRoomsPost">apiRoomsPost</a></li>
+            <li><a href="#!/RoomsApi#getRooms">getRooms</a></li>
+          </ul>
+        </div>
+      </div>
+    <div class="non-sidebar">
+      <div class="main-content">
+        <h2>Getting Started</h2>
+        <p>To begin using your fancy HTTP API, follow the steps below.</p>
+        <p>You can add some helpful tips, here</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

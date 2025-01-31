@@ -1,0 +1,415 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  <h2><a name="apiHotelsIdDelete"></a>apiHotelsIdDelete</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>DELETE</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the hotel to delete</p>
+	  </li>
+  </ul>
+  <h2><a name="apiHotelsIdImagesPost"></a>apiHotelsIdImagesPost</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels/{id}/images</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The id of the hotel to upload image</p>
+	  </li>
+	  <li class="parameter">
+      <span class="param-in">Form: </span>
+      
+      
+      
+      
+      <span class="param-name">file</span>
+      <span class="param-type">byte[]</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">alternativeText</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Alternative Text (Alt)</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">thumbnail</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Indicates if the image should be used as a thumbnail</p>
+	  </li>
+  </ul>
+  <h2><a name="apiHotelsIdPut"></a>apiHotelsIdPut</h2>
+  <hr>
+  <p></p>
+  <p>Sample request:                    PUT /hotels/{hotelId}      {         \&quot;cityId\&quot;: \&quot;{cityId}\&quot;         \&quot;name\&quot;: \&quot;Paris Hotel\&quot;,         \&quot;owner\&quot;: \&quot;John Smith\&quot;,         \&quot;street\&quot;: \&quot;230 st.\&quot;,         \&quot;location\&quot;: {            \&quot;latitude\&quot;: \&quot;17.2\&quot;,            \&quot;longitude\&quot;: \&quot;47.1\&quot;         }      }</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>PUT</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the hotel to update</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">UpdateHotelDto(UpdateHotelDto)</span>
+      
+      <p class="param-description">The data for the updated hotel</p>
+	  </li>
+  </ul>
+  <h2><a name="apiHotelsPost"></a>apiHotelsPost</h2>
+  <hr>
+  <p></p>
+  <p>Sample request:        POST /hotels      {         \&quot;name\&quot;: \&quot;Paris Hotel\&quot;,         \&quot;owner\&quot;: \&quot;John Smith\&quot;,         \&quot;street\&quot;: \&quot;233 st.\&quot;,         \&quot;location\&quot;: {            \&quot;latitude\&quot;: \&quot;10.2\&quot;,            \&quot;longitude\&quot;: \&quot;47.1\&quot;         },         \&quot;cityId\&quot;: \&quot;{cityId}\&quot;         \&quot;starRate\&quot; : \&quot;5\&quot;,         \&quot;checkInTime\&quot;: \&quot;13:00:00.0000000\&quot;,         \&quot;checkOutTime\&quot;: \&quot;12:00:00.0000000\&quot;      }</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="HotelOutputDto"><a href="">HotelOutputDto</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">CreateHotelDto(CreateHotelDto)</span>
+      
+      <p class="param-description">The data for the new hotel</p>
+	  </li>
+  </ul>
+  <h2><a name="getHotel"></a>getHotel</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels/{id}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="HotelWithRoomsAndImagesOutputDto"><a href="">HotelWithRoomsAndImagesOutputDto</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">UUID</span>
+      
+      <p class="param-description">The ID of the hotel</p>
+	  </li>
+  </ul>
+  <h2><a name="getHotels"></a>getHotels</h2>
+  <hr>
+  <p></p>
+  <p>The retrieval of hotels can be customized by providing various query parameters.  These parameters include sorting options, page number, page size, and a search term.    Sample request:        GET /hotels?sortOrder&#x3D;asc&amp;sortColumn&#x3D;name&amp;pageNumber&#x3D;1&amp;pageSize&#x3D;10&amp;searchQuery&#x3D;Carlton</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="HotelOutputDto"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageNumber</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageSize</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SearchTerm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortColumn</span>
+      <span class="param-type">HotelSortColumn</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortOrder</span>
+      <span class="param-type">SortOrder</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="searchAndFilterHotels"></a>searchAndFilterHotels</h2>
+  <hr>
+  <p></p>
+  <p>Performs a search based on a query string and optional parameters, allowing users to refine results.  Parameters include:  - Check-in and check-out dates  - Number of adults, children, and rooms  Additional filters can be applied, such as:  - Minimum star rating  - Price range (minimum and maximum)  - Amenities  - Room types  These options help narrow down the search to provide more tailored results.    Sample request:        GET /hotels/search?searchTerm&#x3D;Tokyo&amp;maxPrice&#x3D;100&amp;minStarRating&#x3D;4&amp;amenities&#x3D;FreeWifi&amp;roomTypes&#x3D;Standard</p>
+  <h3 class="section">URL</h3>
+  <code>//api/Hotels/Search-Filter</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="HotelSearchResultOutputDto"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">CheckInDate</span>
+      <span class="param-type">date</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">CheckOutDate</span>
+      <span class="param-type">date</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">Adults</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">Children</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">Rooms</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">MinStarRating</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">MaxPrice</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">MinPrice</span>
+      <span class="param-type">Double</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">Amenities</span>
+      <span class="param-type">List(String)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">RoomTypes</span>
+      <span class="param-type">List(RoomType)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageNumber</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">PageSize</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SearchTerm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortColumn</span>
+      <span class="param-type">HotelSearchSortColumn</span>
+      
+      <p class="param-description"></p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">SortOrder</span>
+      <span class="param-type">SortOrder</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+</div>
